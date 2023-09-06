@@ -1,4 +1,4 @@
-@import-normalize; /* bring in normalize.css styles */
+@import-normalize; 
 
 body {
   margin: 0;
@@ -28,7 +28,6 @@ td {
   padding: 5px;
     font-size: 14px;
   border-bottom: 1px solid #ccc;
-  /* границы между столбцами */
 }
 
 
