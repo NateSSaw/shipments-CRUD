@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/shipments-CRUD-page/static/css/main.fc64db4b.css",
+    "main.js": "/shipments-CRUD-page/static/js/main.6a99ce46.js",
+    "static/media/cross.svg": "/shipments-CRUD-page/static/media/cross.d62fa7ada390715c07e7.svg",
+    "index.html": "/shipments-CRUD-page/index.html",
+    "static/media/profile.svg": "/shipments-CRUD-page/static/media/profile.764bfaf597be90990d4f.svg",
+    "main.fc64db4b.css.map": "/shipments-CRUD-page/static/css/main.fc64db4b.css.map",
+    "main.6a99ce46.js.map": "/shipments-CRUD-page/static/js/main.6a99ce46.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fc64db4b.css",
+    "static/js/main.6a99ce46.js"
+  ]
+}
