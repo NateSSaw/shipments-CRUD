@@ -38,9 +38,9 @@ export const deleteShipment = createAsyncThunk(
 
 export const changeShipmentData = createAsyncThunk(
   "shipments/changeShipmentData",
-  async ( id, formData , thunkAPI) => {
+  async (formData , thunkAPI) => {
     try {
-      const { data } = await axios.put(`/shipments/${id}`, formData);
+      const { data } = await axios.put(`/shipments/${formData.id}`, formData);
 
       return data;
     } catch (e) {

@@ -38,7 +38,7 @@ const handleInputChange = async (e) => {
     
     const onSubmit = async (e) => {
         e.preventDefault();
-        await dispatch(changeShipmentData(formData.id, formData))
+        await dispatch(changeShipmentData( formData))
         setIsFormChanged(false);
   };
 

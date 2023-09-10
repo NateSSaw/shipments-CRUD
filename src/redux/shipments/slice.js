@@ -30,21 +30,21 @@ const shipmentsSlice = createSlice({
       state.error = null;
       state.shipmentsList = action.payload;
     },
-    [changeShipmentData.fulfilled]: (state, action) => {
+      [changeShipmentData.fulfilled]: (state, action) => {
       state.isLoading = false;
       state.error = null;
        const index = state.shipmentsList.findIndex(
-        shipment => shipment.id === action.payload.id
+        shipmentsList => shipmentsList.id === action.payload.id
       );
         state.shipmentsList[index] = action.payload;
     },
     [deleteShipment.fulfilled]: (state, action) => {
       state.isLoading = false;
       state.error = null;
-      const index = state.ingredients.findIndex(
-        ingredient => ingredient.newId === action.payload.newId
+      const index = state.shipmentsList.findIndex(
+        shipmentsList => shipmentsList.id === action.payload.id
       );
-      state.ingredients.splice(index, 1);
+      state.shipmentsList.splice(index, 1);
     },
   },
 });

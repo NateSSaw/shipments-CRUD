@@ -91,6 +91,7 @@ th {
 }
 
 td {
+    
   padding: 5px;
     font-size: 14px;
   border-bottom: 1px solid #ccc;
@@ -101,8 +102,17 @@ td:nth-child(3) {
 td:nth-child(6) {
     width: 350px;
 }
-
-.edit, .delete {
+.edit{
+padding: 0;
+margin: 0;
+display: inline-block;
+height: 30px;
+width: 40px;
+border: none;
+box-shadow: none;
+}
+.delete {
+   
   height: 30px;
   width: 40px;
   border-radius: 4px;

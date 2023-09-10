@@ -5,25 +5,9 @@ import { getShipmentsList } from 'redux/shipments/selectors';
 export const TableRow = () => {
     const shipments = useSelector(getShipmentsList);
   
-//     useEffect(() => {
-//         dispatch(getAllShipments(page));
-        
-// }, [dispatch, page]);
-
-//     const onNextPage = () => {
-//         setPage(prev=>prev+1)
-//     }
-
-//     const onPrevPage = () => {
-//         setPage(prev=>prev-1)
-//     }
-
-
- 
-
   return (
     <tbody>
-      {shipments && shipments?.map(
+      {shipments && shipments.map(
         ({ id, date, customer, trackingNo, status, consignee }) => {
           return (
               <tr key={id}>
