@@ -1,29 +1,29 @@
 {
   "files": {
     "main.css": "/shipments-CRUD/static/css/main.bab7983a.css",
-    "main.js": "/shipments-CRUD/static/js/main.0207a255.js",
-    "static/css/936.2ee646b3.chunk.css": "/shipments-CRUD/static/css/936.2ee646b3.chunk.css",
+    "main.js": "/shipments-CRUD/static/js/main.2ac88b27.js",
+    "static/css/936.3097a52c.chunk.css": "/shipments-CRUD/static/css/936.3097a52c.chunk.css",
     "static/js/936.2cfab3c3.chunk.js": "/shipments-CRUD/static/js/936.2cfab3c3.chunk.js",
     "static/css/591.0a369699.chunk.css": "/shipments-CRUD/static/css/591.0a369699.chunk.css",
     "static/js/591.c1dfdc58.chunk.js": "/shipments-CRUD/static/js/591.c1dfdc58.chunk.js",
-    "static/css/784.4bd91908.chunk.css": "/shipments-CRUD/static/css/784.4bd91908.chunk.css",
-    "static/js/784.750e90dc.chunk.js": "/shipments-CRUD/static/js/784.750e90dc.chunk.js",
+    "static/css/784.ceb26c57.chunk.css": "/shipments-CRUD/static/css/784.ceb26c57.chunk.css",
+    "static/js/784.066a5d36.chunk.js": "/shipments-CRUD/static/js/784.066a5d36.chunk.js",
     "static/media/transport.jpg": "/shipments-CRUD/static/media/transport.4dc630191202f7c5ac9a.jpg",
     "static/media/favicon.svg": "/shipments-CRUD/static/media/favicon.a8ef3a1ef7ad3ed1d96275bda087cde1.svg",
     "static/media/cross.svg": "/shipments-CRUD/static/media/cross.111096e61c5727d0b42b.svg",
     "index.html": "/shipments-CRUD/index.html",
     "static/media/profile.svg": "/shipments-CRUD/static/media/profile.4cea704d461ed1c82f19.svg",
     "main.bab7983a.css.map": "/shipments-CRUD/static/css/main.bab7983a.css.map",
-    "main.0207a255.js.map": "/shipments-CRUD/static/js/main.0207a255.js.map",
-    "936.2ee646b3.chunk.css.map": "/shipments-CRUD/static/css/936.2ee646b3.chunk.css.map",
+    "main.2ac88b27.js.map": "/shipments-CRUD/static/js/main.2ac88b27.js.map",
+    "936.3097a52c.chunk.css.map": "/shipments-CRUD/static/css/936.3097a52c.chunk.css.map",
     "936.2cfab3c3.chunk.js.map": "/shipments-CRUD/static/js/936.2cfab3c3.chunk.js.map",
     "591.0a369699.chunk.css.map": "/shipments-CRUD/static/css/591.0a369699.chunk.css.map",
     "591.c1dfdc58.chunk.js.map": "/shipments-CRUD/static/js/591.c1dfdc58.chunk.js.map",
-    "784.4bd91908.chunk.css.map": "/shipments-CRUD/static/css/784.4bd91908.chunk.css.map",
-    "784.750e90dc.chunk.js.map": "/shipments-CRUD/static/js/784.750e90dc.chunk.js.map"
+    "784.ceb26c57.chunk.css.map": "/shipments-CRUD/static/css/784.ceb26c57.chunk.css.map",
+    "784.066a5d36.chunk.js.map": "/shipments-CRUD/static/js/784.066a5d36.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bab7983a.css",
-    "static/js/main.0207a255.js"
+    "static/js/main.2ac88b27.js"
   ]
 }
