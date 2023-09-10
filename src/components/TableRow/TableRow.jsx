@@ -1,58 +1,36 @@
-import { Modal } from 'components/Modal/Modal';
-import { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { getShipmentsList } from 'redux/shipments/selectors';
 
-export const TableRow = ({ data, onDelete }) => {
-  const [openedRow, setOpenedRow] = useState({});
-  const [isShowModal, setIsShowModal] = useState(false);
+export const TableRow = () => {
+    const shipments = useSelector(getShipmentsList);
+    //   const deleteRow = () =>
 
-  const handleShow = (
-    orderNo,
-    date,
-    customer,
-    trackingNo,
-    status,
-    consignee
-  ) => {
-    setIsShowModal(true);
-    setOpenedRow({ orderNo, date, customer, trackingNo, status, consignee });
-  };
 
-  const closeModal = () => setIsShowModal(false);
+ 
 
   return (
     <tbody>
-      {data.map(
-        ({ orderNo, date, customer, trackingNo, status, consignee }) => {
+      {shipments.length>0 && shipments?.map(
+        ({ id, date, customer, trackingNo, status, consignee }) => {
           return (
-            <tr key={orderNo}>
-              <td>{orderNo}</td>
+              <tr key={id}>
+              <td>{id}</td>
               <td>{date}</td>
               <td>{customer}</td>
               <td>{trackingNo}</td>
               <td>{status}</td>
               <td>{consignee}</td>
               <td>
-                <button
-                  type="button"
+                <Link
                   className="edit"
-                  onClick={() =>
-                    handleShow(
-                      orderNo,
-                      date,
-                      customer,
-                      trackingNo,
-                      status,
-                      consignee
-                    )
-                  }
-                ></button>
-                {isShowModal && (
-                  <Modal data={openedRow} closeModal={closeModal}></Modal>
-                )}
+                  to={`/shipments/${id}`}
+                ></Link>
+            
                 <button
                   type="button"
                   className="delete"
-                  onClick={() => onDelete(orderNo)}
+                 
                 ></button>
               </td>
             </tr>

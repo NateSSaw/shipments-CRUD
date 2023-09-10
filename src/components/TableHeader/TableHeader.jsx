@@ -2,12 +2,12 @@ export const TableHeader = () => {
   return (
     <thead>
       <tr>
-        <th>Order No</th>
-        <th>Delivery Date</th>
-        <th>Customer</th>
-        <th>Tracking No</th>
-        <th>Status</th>
-        <th colSpan="2">Consignee</th>
+        <th>ORDERNO</th>
+        <th>DELIVERYDATE</th>
+        <th>CUSTOMER</th>
+        <th>TRACKINGNO</th>
+        <th>STATUS</th>
+        <th colSpan="2">CONSIGNEE</th>
       </tr>
     </thead>
   );

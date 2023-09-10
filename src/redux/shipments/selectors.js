@@ -1,2 +1,2 @@
-export const getShipmentsList = state => state.shipmentsList.shipments;
-export const isLoading = state => state.shipmentsList.isLoading;
+export const getShipmentsList = state => state.shipments.shipments;
+export const getIsLoading = state => state.shipments.isLoading;

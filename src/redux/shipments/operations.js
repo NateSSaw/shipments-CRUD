@@ -10,12 +10,9 @@ export const getAllShipments = createAsyncThunk(
   'shipments/getAllShipments',
 
     async (page, thunkAPI) => {
-      const config = {
-            params: {
-              page: page,
-            }}
+    
       try {
-        const { data } = await axios.get('/shipments', config);
+        const { data } = await axios.get(`/shipments?page=${page}`);
 
       if (data.length === 0)
         return thunkAPI.rejectWithValue({ message: 'Shipments list is empty' });
@@ -26,6 +23,8 @@ export const getAllShipments = createAsyncThunk(
     }
   }
 );
+
+
 export const deleteShipment = createAsyncThunk(
   'shipments/deleteShipment',
   async (id, thunkAPI) => {
@@ -38,11 +37,12 @@ export const deleteShipment = createAsyncThunk(
     }
   }
 );
+
 export const changeShipmentData = createAsyncThunk(
-  'shipments/changeShipmentData',
-  async (id, shipmentData, thunkAPI) => {
+  "shipments/changeShipmentData",
+  async ({ id, formData }, thunkAPI) => {
     try {
-      const { data } = await axios.put(`/shipments/${id}`, shipmentData);
+      const { data } = await axios.put(`/shipments/${id}`, formData);
 
       return data;
     } catch (e) {

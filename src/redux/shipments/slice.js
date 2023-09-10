@@ -4,7 +4,7 @@ import {
   deleteShipment,
   changeShipmentData,
 } from './operations';
-import { initialState } from './initial-state';
+import { initialState } from './initialState';
 
 const handlePending = state => {
   state.isLoading = true;
@@ -15,7 +15,7 @@ const handleRejected = (state, action) => {
   state.error = action.payload;
 };
 
-const ingredientsSlice = createSlice({
+const shipmentsSlice = createSlice({
   name: 'shipmentsList',
   initialState: initialState,
   extraReducers: {
@@ -49,4 +49,4 @@ const ingredientsSlice = createSlice({
   },
 });
 
-export const ingredientsReducer = ingredientsSlice.reducer;
+export const shipmentsReducer = shipmentsSlice.reducer;
