@@ -44,11 +44,13 @@ export default function ShipmentPage() {
     };
 
     return (
+        <div className={css.block}>
         <div className={css.page__container}>
-            <h2 className={css.shipment__title}>Shipment Details</h2>
+                <h2 className={css.shipment__title}>Shipment Details</h2>
+                
             <form onSubmit={onSubmit} className={css.shipment__form}>
                 <div className={css.shipment__container}>
-                    <label htmlFor="id" className={css.shipment__lable}>Order No:</label>
+                    <label htmlFor="id" className={css.shipment__lable}>orderNo:</label>
                     <input
                         type="text"
                         id="id"
@@ -70,7 +72,7 @@ export default function ShipmentPage() {
                     />
                 </div>
                 <div className={css.shipment__container}>
-                    <label htmlFor="customer" className={css.shipment__lable}>Customer:</label>
+                    <label htmlFor="customer" className={css.shipment__lable}>customer:</label>
                     <input
                         type="text"
                         id="customer"
@@ -81,7 +83,7 @@ export default function ShipmentPage() {
                     />
                 </div>
                 <div className={css.shipment__container}>
-                    <label htmlFor="trackingNo" className={css.shipment__lable}>Tracking No:</label>
+                    <label htmlFor="trackingNo" className={css.shipment__lable}>trackingNo:</label>
                     <input
                         type="text"
                         id="trackingNo"
@@ -92,7 +94,7 @@ export default function ShipmentPage() {
                     />
                 </div>
                 <div className={css.shipment__container}>
-                    <label htmlFor="consignee" className={css.shipment__lable}>Consignee:</label>
+                    <label htmlFor="consignee" className={css.shipment__lable}>consignee:</label>
                     <input
                         type="text"
                         id="consignee"
@@ -103,7 +105,7 @@ export default function ShipmentPage() {
                     />
                 </div>
                 <div className={css.shipment__container}>
-                    <label htmlFor="status" className={css.shipment__lable}>Status:</label>
+                    <label htmlFor="status" className={css.shipment__lable}>status:</label>
                     <input
                         type="text"
                         id="status"
@@ -113,7 +115,8 @@ export default function ShipmentPage() {
                         className={css.shipment__input}
                     />
                 </div>
-                <button type="submit" disabled={!isFormChanged}>Submit</button>
+                <button type="submit" disabled={!isFormChanged} className={css.shipment__submit}>Edit</button>
             </form>
+            </div>
         </div>)
 };
