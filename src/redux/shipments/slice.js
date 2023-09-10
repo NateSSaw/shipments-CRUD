@@ -28,15 +28,15 @@ const shipmentsSlice = createSlice({
     [getAllShipments.fulfilled]: (state, action) => {
       state.isLoading = false;
       state.error = null;
-      state.shipments = action.payload;
+      state.shipmentsList = action.payload;
     },
     [changeShipmentData.fulfilled]: (state, action) => {
       state.isLoading = false;
       state.error = null;
-       const index = state.shipments.findIndex(
+       const index = state.shipmentsList.findIndex(
         shipment => shipment.id === action.payload.id
       );
-        state.shipments[index] = action.payload;
+        state.shipmentsList[index] = action.payload;
     },
     [deleteShipment.fulfilled]: (state, action) => {
       state.isLoading = false;

@@ -1,5 +1,5 @@
 export const initialState = {
-  ShipmentsList: [],
+  shipmentsList: [],
   isLoading: false,
   error: null,
 };
