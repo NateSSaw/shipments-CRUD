@@ -2,9 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 import axios from 'axios';
 axios.defaults.baseURL = 'https://64f8a783824680fd217fe46c.mockapi.io/';
-axios.defaults.params = {
-    limit: 10,
-  };
+
 
 export const getAllShipments = createAsyncThunk(
   'shipments/getAllShipments',
@@ -12,7 +10,7 @@ export const getAllShipments = createAsyncThunk(
     async (page, thunkAPI) => {
     
       try {
-        const { data } = await axios.get(`/shipments?page=${page}`);
+        const { data } = await axios.get(`/shipments?page=${page}&limit=10`);
 
       if (data.length === 0)
         return thunkAPI.rejectWithValue({ message: 'Shipments list is empty' });
@@ -40,7 +38,7 @@ export const deleteShipment = createAsyncThunk(
 
 export const changeShipmentData = createAsyncThunk(
   "shipments/changeShipmentData",
-  async ({ id, formData }, thunkAPI) => {
+  async ( id, formData , thunkAPI) => {
     try {
       const { data } = await axios.put(`/shipments/${id}`, formData);
 

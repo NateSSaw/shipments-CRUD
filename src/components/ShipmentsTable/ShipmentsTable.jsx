@@ -14,9 +14,8 @@ export default function ShipmentsTable() {
     const isLoading = useSelector(getIsLoading);
 
     useEffect(() => {
-        dispatch(getAllShipments(page))
-      
-      
+        dispatch(getAllShipments(page));
+        
 }, [dispatch, page]);
 
     const onNextPage = () => {
@@ -26,8 +25,6 @@ export default function ShipmentsTable() {
     const onPrevPage = () => {
         setPage(prev=>prev-1)
     }
-
-
 
     return (
         <>

@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import css from './ShipmentPage.module.css';
 import { useDispatch } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import getShipmentByNo from 'services/getShipment';
@@ -9,13 +8,12 @@ import { changeShipmentData } from 'redux/shipments/operations';
 export default function ShipmentPage() {
     const [formData, setFormData] = useState({});
   const [isFormChanged, setIsFormChanged] = useState(false);
-    const {orderNo }= useParams();
+    const {id }= useParams();
 
-  
     const dispatch = useDispatch();
     const navigate = useNavigate();
     useEffect(() => {
-        getShipmentByNo(orderNo).then(data => {
+        getShipmentByNo(id).then(data => {
             if (data) {
                 setFormData(data);
             } else {
@@ -23,28 +21,25 @@ export default function ShipmentPage() {
                 navigate('/notFound');
             }
         })
- }, [orderNo, navigate]);
+ }, [id, navigate]);
      
 
-const handleInputChange = (e) => {
+const handleInputChange = async (e) => {
   const { name, value } = e.target;
-  setFormData(prevData => ({
+  if (formData[name] !== value) { 
+   await setFormData(prevData => ({
     ...prevData,
-    [name]: value
-  }));
-    console.log(formData)
-  setIsFormChanged(true);
-};
-
-    const onSubmit = (e) => {
+      [name]: value
+    }));
+    console.log( formData);
+    setIsFormChanged(true);
+  }
+}
+    
+    const onSubmit = async (e) => {
         e.preventDefault();
-    dispatch(changeShipmentData(orderNo ,formData)).then((response) => {
-        console.log(response);
+        await dispatch(changeShipmentData(formData.id, formData))
         setIsFormChanged(false);
-      })
-      .catch((error) => {
-        console.log(error);
-      });setIsFormChanged(false);
   };
 
 
@@ -55,7 +50,6 @@ const handleInputChange = (e) => {
    <>
     <form onSubmit={onSubmit}>
         <h2>Shipment Details</h2>
-       
           <label htmlFor="id">Order No:</label>
           <input
             type="text"
@@ -63,9 +57,7 @@ const handleInputChange = (e) => {
             disabled
             name="id"
             value={formData.id || ""}
-          />
-       
-     
+          />  
           <label htmlFor="customer">Customer:</label>
           <input
             type="text"
@@ -74,8 +66,6 @@ const handleInputChange = (e) => {
             value={formData.customer || ""}
             onChange={handleInputChange}
           />
-      
-    
           <label htmlFor="trackingNo">Tracking No:</label>
           <input
             type="text"
@@ -84,8 +74,6 @@ const handleInputChange = (e) => {
             value={formData.trackingNo || ""}
             onChange={handleInputChange}
           />
-       
-        
           <label htmlFor="consignee">Consignee:</label>
           <input
             type="text"
@@ -94,8 +82,6 @@ const handleInputChange = (e) => {
             value={formData.consignee || ""}
             onChange={handleInputChange}
           />
-       
-    
           <label htmlFor="status">Status:</label>
           <input
             type="text"
@@ -104,7 +90,6 @@ const handleInputChange = (e) => {
             value={formData.status || ""}
             onChange={handleInputChange}
           />
-        
         <button type="submit" disabled={!isFormChanged}>Submit</button>
       </form>
     </>)
