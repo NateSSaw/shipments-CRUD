@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/shipments-CRUD/static/css/main.91a49def.css",
-    "main.js": "/shipments-CRUD/static/js/main.13886711.js",
+    "main.js": "/shipments-CRUD/static/js/main.2b2c80c0.js",
     "static/js/544.2871cb49.chunk.js": "/shipments-CRUD/static/js/544.2871cb49.chunk.js",
-    "static/js/87.aaa57c4f.chunk.js": "/shipments-CRUD/static/js/87.aaa57c4f.chunk.js",
+    "static/js/87.52fdff24.chunk.js": "/shipments-CRUD/static/js/87.52fdff24.chunk.js",
     "static/js/369.22c728b4.chunk.js": "/shipments-CRUD/static/js/369.22c728b4.chunk.js",
     "static/media/cross.svg": "/shipments-CRUD/static/media/cross.111096e61c5727d0b42b.svg",
     "index.html": "/shipments-CRUD/index.html",
     "static/media/profile.svg": "/shipments-CRUD/static/media/profile.4cea704d461ed1c82f19.svg",
     "main.91a49def.css.map": "/shipments-CRUD/static/css/main.91a49def.css.map",
-    "main.13886711.js.map": "/shipments-CRUD/static/js/main.13886711.js.map",
+    "main.2b2c80c0.js.map": "/shipments-CRUD/static/js/main.2b2c80c0.js.map",
     "544.2871cb49.chunk.js.map": "/shipments-CRUD/static/js/544.2871cb49.chunk.js.map",
-    "87.aaa57c4f.chunk.js.map": "/shipments-CRUD/static/js/87.aaa57c4f.chunk.js.map",
+    "87.52fdff24.chunk.js.map": "/shipments-CRUD/static/js/87.52fdff24.chunk.js.map",
     "369.22c728b4.chunk.js.map": "/shipments-CRUD/static/js/369.22c728b4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.91a49def.css",
-    "static/js/main.13886711.js"
+    "static/js/main.2b2c80c0.js"
   ]
 }
