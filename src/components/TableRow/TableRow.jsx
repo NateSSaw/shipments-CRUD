@@ -1,12 +1,19 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { deleteShipment } from 'redux/shipments/operations';
 import { getShipmentsList } from 'redux/shipments/selectors';
+import css from './TableRow.module.css'
 
 export const TableRow = () => {
     const shipments = useSelector(getShipmentsList);
-  
+    const dispatch = useDispatch();
+
+    const handleDelete = id => {
+      dispatch(deleteShipment(id))
+  }
+
   return (
-    <tbody>
+    <tbody className={css.body}>
       {shipments && shipments.map(
         ({ id, date, customer, trackingNo, status, consignee }) => {
           return (
@@ -18,16 +25,17 @@ export const TableRow = () => {
               <td>{status}</td>
               <td>{consignee}</td>
               <td>
+                <div className={css.container__btn}>
                 <Link
-                  className="edit"
+                  className={css.edit}
                   to={`/shipments/${id}`}
                 ></Link>
             
-                <button
+                <button    
                   type="button"
-                  className="delete"
-                 
-                ></button>
+                  className={css.delete}
+                onClick={() => handleDelete(id)}
+                ></button></div>
               </td>
             </tr>
           );

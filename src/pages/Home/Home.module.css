@@ -1,0 +1,13 @@
+.main__title{
+    margin-bottom: 40px;
+    margin-top: 40px;
+    color: white;
+    font-size: 30px;
+    
+}
+
+.main__text{
+    color: white;
+    font-size: 18px;
+    line-height: 1.5;
+}

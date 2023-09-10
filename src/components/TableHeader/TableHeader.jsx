@@ -1,3 +1,4 @@
+import  './TableHeader.module.css'
 export const TableHeader = () => {
   return (
     <thead>
