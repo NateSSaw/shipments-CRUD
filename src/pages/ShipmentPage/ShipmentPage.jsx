@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { changeShipmentData } from 'redux/shipments/operations';
 
 export default function ShipmentPage() {
-    const [formData, setFormData] = useState({});
+    const [formData, setFormData] = useState('');
   const [isFormChanged, setIsFormChanged] = useState(false);
     const {id }= useParams();
 
