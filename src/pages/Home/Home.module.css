@@ -1,5 +1,6 @@
 .main__title{
     margin-bottom: 40px;
+    margin-left: 40px;
     margin-top: 40px;
     color: white;
     font-size: 30px;
@@ -7,7 +8,9 @@
 }
 
 .main__text{
-    color: white;
+    max-width: 500px;
+    margin-left: 50px;
+    color: rgb(51, 71, 111);
     font-size: 18px;
     line-height: 1.5;
 }

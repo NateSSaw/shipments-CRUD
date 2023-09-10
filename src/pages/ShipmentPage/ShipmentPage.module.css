@@ -2,7 +2,7 @@
     position: relative;
     width: 1250px;
     margin-top: 20px;
-    height: 780px;
+    height: 730px;
     margin-left: auto;
     margin-right: auto;
     background-color: rgb(233, 240, 240);
@@ -49,6 +49,7 @@
 }
 
 .shipment__form {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
 
@@ -72,10 +73,10 @@
 
 }
 
-.shipment__submit {
+.shipment__submit, .shipment__back {
     width: 100px;
     padding: 5px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
     font-style: normal;
@@ -92,4 +93,8 @@
 
 .shipment__submit:disabled {
     background-color: rgb(172, 170, 170);
+}
+
+.shipment__back{
+ text-align: center;
 }

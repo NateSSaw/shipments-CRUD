@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import getShipmentByNo from 'services/getShipment';
 import { useState } from 'react';
 import { changeShipmentData } from 'redux/shipments/operations';
@@ -10,7 +10,7 @@ export default function ShipmentPage() {
     const [formData, setFormData] = useState('');
     const [isFormChanged, setIsFormChanged] = useState(false);
     const { id } = useParams();
-
+  
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -115,7 +115,10 @@ export default function ShipmentPage() {
                         className={css.shipment__input}
                     />
                 </div>
-                <button type="submit" disabled={!isFormChanged} className={css.shipment__submit}>Edit</button>
+                    <button type="submit" disabled={!isFormChanged} className={css.shipment__submit}>Edit</button>
+                    <Link to='/shipments' className={css.shipment__back}>
+                        Go back
+                    </Link>
             </form>
             </div>
         </div>)
