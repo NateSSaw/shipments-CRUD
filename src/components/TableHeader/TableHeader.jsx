@@ -2,101 +2,116 @@ import { useState } from 'react';
 import './TableHeader.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { getShipmentsList } from 'redux/shipments/selectors';
-import Arrow from 'components/ArrowUp/Arrow/Arrow';
-import { getSortedShipments } from 'redux/sort/selectors';
 import { sortShipmentsData } from 'redux/sort/slice';
+import ArrowDown from 'components/ArrowDown/ArrowDown';
+import ArrowUp from 'components/ArrowUp/ArrowUp';
 export const TableHeader = () => {
-      const [fieldData, setFieldData] = useState('');
-  const [directionSort, setDirectionSort] = useState(true);
+    const [directionSort, setDirectionSort] = useState(true);
     const shipmnetsData = useSelector(getShipmentsList);
-    const sortList = useSelector(getSortedShipments);
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
 
     const sortData = field => {
         const sortedData = [...shipmnetsData];
-
         if (directionSort) {
-            sortedData.sort((a, b) => {
-                return a[field] > b[field] ? 1 : -1;
-            });
+            if (typeof field === 'number') {
+                sortedData.sort((a, b) => {
+                    return a[field] - b[field];
+                });
+            } else if (typeof field === 'string') {
+                sortedData.sort((a, b) => {
+                    return a[field].localeCompare(b[field]);
+                });
+            }
         } else {
-            sortedData.reverse((a, b) => {
-                return a[field] > b[field] ? -1 : 1;
-            });
+            if (typeof field === 'number') {
+                sortedData.sort((a, b) => {
+                    return b[field] - a[field];
+                });
+            } else if (typeof field === 'string') {
+                sortedData.sort((a, b) => {
+                    return b[field].localeCompare(a[field]);
+                });
+            }
         }
-        
-        if (sortData) {
-            dispatch(sortShipmentsData(sortedData))
-        }
-        
-        dispatch(sortShipmentsData(sortedData))
+        dispatch(sortShipmentsData(sortedData));
         setDirectionSort(prevState => !prevState);
-        setFieldData(field);
-       
+        
     };
-  return (
-    <thead>
-      <tr>
-        <th
-          onClick={() => {
-            sortData('id');
-          }}
-        >
-          ORDERNO
-          {fieldData === 'id' ? <Arrow directionSort={directionSort} /> : null}
-        </th>
-        <th
-          onClick={() => {
-            sortData('date');
-          }}
-        >
-          DELIVERYDATE
-          {fieldData === 'date' ? (
-            <Arrow directionSort={directionSort} />
-          ) : null}
-        </th>
-        <th
-          onClick={() => {
-            sortData('customer');
-          }}
-        >
-          CUSTOMER
-          {fieldData === 'customer' ? (
-            <Arrow directionSort={directionSort} />
-          ) : null}
-        </th>
-        <th
-          onClick={() => {
-            sortData('trackingNo');
-          }}
-        >
-          TRACKINGNO
-          {fieldData === 'trakingNo' ? (
-            <Arrow directionSort={directionSort} />
-          ) : null}
-        </th>
-        <th
-          onClick={() => {
-            sortData('status');
-          }}
-        >
-          STATUS
-          {fieldData === 'status' ? (
-            <Arrow directionSort={directionSort} />
-          ) : null}
-        </th>
-        <th
-          onClick={() => {
-            sortData('consignee');
-          }}
-          colSpan="2"
-        >
-          CONSIGNEE
-          {fieldData === 'consignee' ? (
-            <Arrow directionSort={directionSort} />
-          ) : null}
-        </th>
-      </tr>
-    </thead>
-  );
+
+    return (
+        <thead>
+            <tr>
+                <th>ORDERNO</th>
+                <th>DELIVERYDATE</th>
+                <th
+                    onClick={() => {
+                        sortData('customer');
+                    }}
+                ><span>
+                    CUSTOMER</span>
+                    <ArrowUp
+                                             onClick={() => {
+                            sortData('customer');
+                        }}
+                    />
+                    <ArrowDown
+                        onClick={() => {
+                            sortData('customer');
+                        }}
+                    />
+                </th>
+                <th
+                    onClick={() => {
+                        sortData('trackingNo');
+                    }}
+                ><span>
+                    TRACKINGNO</span>
+                    <ArrowUp
+                        onClick={() => {
+                            sortData('trackingNo');
+                        }}
+                    />
+                    <ArrowDown
+                        onClick={() => {
+                            sortData('trackingNo');
+                        }}
+                    />
+                </th>
+                <th
+                    onClick={() => {
+                        sortData('status');
+                    }}
+                ><span>
+                    STATUS</span>
+                    <ArrowUp
+                        onClick={() => {
+                            sortData('status');
+                        }}
+                    />
+                    <ArrowDown
+                        onClick={() => {
+                            sortData('status');
+                        }}
+                    />
+                </th>
+                <th onClick={() => {
+                    sortData('consignee');
+                }} colSpan="2">
+                    <span>
+                    CONSIGNEE</span>
+                    <ArrowUp
+                       
+                        onClick={() => {
+                            sortData('consignee');
+                        }}
+                    />
+                    <ArrowDown
+                        onClick={() => {
+                            sortData('consignee');
+                        }}
+                    />
+                </th>
+            </tr>
+        </thead>
+    );
 };

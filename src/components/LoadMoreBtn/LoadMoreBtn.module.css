@@ -30,6 +30,7 @@ button {
 
 button:hover,
 button:focus {
-    scale: 1.2;
+    scale: 1.3;
+    
 
 }

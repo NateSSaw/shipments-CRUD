@@ -4,17 +4,19 @@
 }
 td {
 
-    padding:  10px;
+    padding:  10px 15px;
     font-size: 12px;
     border-bottom: 1px solid #ccc;
 }
 
 td:nth-child(3) {
-    width: 370px;
+    width: 320px;
 }
-
+td:nth-child(5) {
+    width: 70px;
+}
 td:nth-child(6) {
-    width: 350px;
+    width: 300px;
 }
 .container__btn {
     display: flex;

@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const sortSlice = createSlice({
     name: 'sort',
     initialState: {
-        sortedList: null
+        sortedList: []
     },
     reducers: {
         sortShipmentsData: (state, action) => {

@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllShipments } from "redux/shipments/operations";
 import { getIsLoading } from "redux/shipments/selectors";
 import css from './ShipmentsTable.module.css'
+import { sortShipmentsData } from "redux/sort/slice";
 
 export default function ShipmentsTable() {
     const [page, setPage] = useState(1);
@@ -16,6 +17,7 @@ export default function ShipmentsTable() {
 
     useEffect(() => {
         dispatch(getAllShipments(page));
+        dispatch(sortShipmentsData([]));
         
 }, [dispatch, page]);
 

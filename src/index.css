@@ -33,16 +33,19 @@ li {
     list-style: none;
 }
 
-
-
-
 img {
     display: block;
     max-width: 100%;
     height: auto;
 }
 
-
+.svg {
+    display: inline-block;
+    margin-left: auto;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
 
 
 

@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { deleteShipment, getAllShipments } from 'redux/shipments/operations';
+import { deleteShipment } from 'redux/shipments/operations';
 import css from './TableRow.module.css';
 import { getSortedShipments } from 'redux/sort/selectors';
 import { getShipmentsList } from 'redux/shipments/selectors';
@@ -13,9 +13,8 @@ export const TableRow = () => {
   const handleDelete = id => {
     dispatch(deleteShipment(id));
   };
-const data = sortedShipmentsData.length >0? sortedShipmentsData : shipments
-    console.log(shipments);
-    console.log(sortedShipmentsData)
+const data = sortedShipmentsData.length >0 ? sortedShipmentsData : shipments
+   
   return (
     <tbody className={css.body}>
       {data?.map(
