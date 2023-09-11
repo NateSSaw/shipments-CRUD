@@ -1,0 +1,1 @@
+export const getSortedShipments = state => state.sortShipments.sortedList;

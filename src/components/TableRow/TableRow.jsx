@@ -1,23 +1,27 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { deleteShipment } from 'redux/shipments/operations';
+import { deleteShipment, getAllShipments } from 'redux/shipments/operations';
+import css from './TableRow.module.css';
+import { getSortedShipments } from 'redux/sort/selectors';
 import { getShipmentsList } from 'redux/shipments/selectors';
-import css from './TableRow.module.css'
 
 export const TableRow = () => {
-    const shipments = useSelector(getShipmentsList);
-    const dispatch = useDispatch();
+  const shipments = useSelector(getShipmentsList);
+  const sortedShipmentsData = useSelector(getSortedShipments);
+  const dispatch = useDispatch();
 
-    const handleDelete = id => {
-      dispatch(deleteShipment(id))
-  }
-
+  const handleDelete = id => {
+    dispatch(deleteShipment(id));
+  };
+const data = sortedShipmentsData.length >0? sortedShipmentsData : shipments
+    console.log(shipments);
+    console.log(sortedShipmentsData)
   return (
     <tbody className={css.body}>
-      {shipments && shipments.map(
+      {data?.map(
         ({ id, date, customer, trackingNo, status, consignee }) => {
           return (
-              <tr key={id}>
+            <tr key={id}>
               <td>{id}</td>
               <td>{date}</td>
               <td>{customer}</td>
@@ -26,16 +30,14 @@ export const TableRow = () => {
               <td>{consignee}</td>
               <td>
                 <div className={css.container__btn}>
-                <Link
-                  className={css.edit}
-                  to={`/shipments/${id}`}
-                ></Link>
-            
-                <button    
-                  type="button"
-                  className={css.delete}
-                onClick={() => handleDelete(id)}
-                ></button></div>
+                  <Link className={css.edit} to={`/shipments/${id}`}></Link>
+
+                  <button
+                    type="button"
+                    className={css.delete}
+                    onClick={() => handleDelete(id)}
+                  ></button>
+                </div>
               </td>
             </tr>
           );

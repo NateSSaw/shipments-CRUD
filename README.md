@@ -28,3 +28,10 @@ AJAX
 
 Mockapi for back-end part
 
+Project launch in development mode.
+
+First launch of the development server:
+
+npm start or yarn start
+
+Next, open http://localhost:3000 in your browser.

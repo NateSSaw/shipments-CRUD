@@ -11,6 +11,7 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { shipmentsReducer } from './shipments/slice';
+import { sortReducer } from './sort/slice';
 
 const persistConfig = {
     key: 'root',
@@ -19,6 +20,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
     shipments: shipmentsReducer,
+    sortShipments: sortReducer,
 })
 
 export const persistedReducer = persistReducer(persistConfig, rootReducer);
