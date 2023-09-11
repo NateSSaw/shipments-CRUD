@@ -1,6 +1,6 @@
 export default function ArrowDown() {
     return (
-        <button className="svg"><svg
+        <button className="svg" type="button"><svg
             xmlns="http://www.w3.org/2000/svg"
             width="12"
             height="12"
