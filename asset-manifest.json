@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/shipments-CRUD/static/css/main.dd671085.css",
-    "main.js": "/shipments-CRUD/static/js/main.3b30711d.js",
+    "main.js": "/shipments-CRUD/static/js/main.c71b3e12.js",
     "static/css/936.f91352fd.chunk.css": "/shipments-CRUD/static/css/936.f91352fd.chunk.css",
     "static/js/936.6a92529a.chunk.js": "/shipments-CRUD/static/js/936.6a92529a.chunk.js",
-    "static/css/976.f536775c.chunk.css": "/shipments-CRUD/static/css/976.f536775c.chunk.css",
+    "static/css/976.4f8437a2.chunk.css": "/shipments-CRUD/static/css/976.4f8437a2.chunk.css",
     "static/js/976.2a497b6a.chunk.js": "/shipments-CRUD/static/js/976.2a497b6a.chunk.js",
     "static/css/784.ca210e42.chunk.css": "/shipments-CRUD/static/css/784.ca210e42.chunk.css",
     "static/js/784.066a5d36.chunk.js": "/shipments-CRUD/static/js/784.066a5d36.chunk.js",
@@ -14,16 +14,16 @@
     "static/media/cross.svg": "/shipments-CRUD/static/media/cross.111096e61c5727d0b42b.svg",
     "static/media/profile.svg": "/shipments-CRUD/static/media/profile.4cea704d461ed1c82f19.svg",
     "main.dd671085.css.map": "/shipments-CRUD/static/css/main.dd671085.css.map",
-    "main.3b30711d.js.map": "/shipments-CRUD/static/js/main.3b30711d.js.map",
+    "main.c71b3e12.js.map": "/shipments-CRUD/static/js/main.c71b3e12.js.map",
     "936.f91352fd.chunk.css.map": "/shipments-CRUD/static/css/936.f91352fd.chunk.css.map",
     "936.6a92529a.chunk.js.map": "/shipments-CRUD/static/js/936.6a92529a.chunk.js.map",
-    "976.f536775c.chunk.css.map": "/shipments-CRUD/static/css/976.f536775c.chunk.css.map",
+    "976.4f8437a2.chunk.css.map": "/shipments-CRUD/static/css/976.4f8437a2.chunk.css.map",
     "976.2a497b6a.chunk.js.map": "/shipments-CRUD/static/js/976.2a497b6a.chunk.js.map",
     "784.ca210e42.chunk.css.map": "/shipments-CRUD/static/css/784.ca210e42.chunk.css.map",
     "784.066a5d36.chunk.js.map": "/shipments-CRUD/static/js/784.066a5d36.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dd671085.css",
-    "static/js/main.3b30711d.js"
+    "static/js/main.c71b3e12.js"
   ]
 }
