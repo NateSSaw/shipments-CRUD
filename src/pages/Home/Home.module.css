@@ -6,11 +6,17 @@
     font-size: 30px;
     
 }
-
-.main__text{
+.home__container{
     max-width: 500px;
     margin-left: 50px;
-    color: rgb(51, 71, 111);
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    border: none;
+    overflow: hidden;
+}
+.main__text{
+        color: rgb(51, 71, 111);
     font-size: 18px;
     line-height: 1.5;
 }

@@ -1,37 +1,38 @@
 nav {
-    position: relative;
-    display: flex;
-    padding: 15px 130px;
-    
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 40px;
+  position: relative;
+  display: flex;
+  padding: 15px 130px;
 
-
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 30px;
 }
 a:hover {
-    background-color: rgb(186, 206, 245);
+  background-color: rgba(186, 206, 245, 0.3);
 }
 a {
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
-    font-size: 28px;
-    background-color: #f4f8fb;
-    padding: 5px;
-    border-radius: 4px;
-    transition: background-color 250ms cubic-bezier();
-
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  font-size: 28px;
+  background-color: transparent;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier();
 }
-.active{
-    background-color: cornflowerblue;
-        color: #ffffff;
+.active {
+  background-color: rgba(red, green, blue, 0.3);
+  color: cornflowerblue;
 }
 .logo {
-    position: absolute;
-top: -1px;
-left: 40px;
-    padding: 9px;
-    border: 1px solid white;
-    border-radius: 12px;
+  position: absolute;
+  top: 0;
+  left: 60px;
+  padding: 9px;
+  border: 1px solid white;
+  border-radius: 12px;
+}
+.logo:hover, .logo:focus{
+    background-color: transparent;
+
 }

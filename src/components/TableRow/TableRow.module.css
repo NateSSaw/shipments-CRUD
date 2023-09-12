@@ -59,6 +59,7 @@ button {
  .delete:hover,
 .delete:focus {
     scale: 1.2;
+    background-color: #ff436f;
 
 }
 .container__btn .edit:hover,
