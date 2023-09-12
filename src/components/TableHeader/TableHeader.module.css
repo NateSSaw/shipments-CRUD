@@ -25,9 +25,9 @@ th {
     border: none;
     background-color: transparent;
     padding: 0;
-    transition: scale 250ms cubic-bezier();
+    transition: scale var(--transition-time) cubic-bezier();
 }
 .svg:hover, .svg:focus{
-    background-color: transparent;
+  
     scale: 1.4;
 }

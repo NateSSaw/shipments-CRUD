@@ -18,18 +18,17 @@ a {
   background-color: transparent;
   padding: 5px;
   border-radius: 4px;
-  transition: background-color 250ms cubic-bezier();
+  transition: color var(--transition-time) cubic-bezier();
 }
 .active {
-  background-color: rgba(red, green, blue, 0.3);
-  color: cornflowerblue;
+    color: cornflowerblue;
 }
 .logo {
   position: absolute;
   top: 0;
   left: 60px;
   padding: 9px;
-  border: 1px solid white;
+  border: 1px solid var(--main-background-color);
   border-radius: 12px;
 }
 .logo:hover, .logo:focus{
